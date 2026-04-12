@@ -1,0 +1,11 @@
+:root {
+    --main-font: "Playwrite IE", cursive;
+}
+
+h1 {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 144px;
+}
