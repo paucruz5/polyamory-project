@@ -43,7 +43,14 @@ header a {
     font-size: 13px;
 }
 
-@media (max-width: 800px) {
+footer {
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('../images/women-polycule.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
     header {
         padding: 10px 0;
     }
