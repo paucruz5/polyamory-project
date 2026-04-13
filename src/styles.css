@@ -40,7 +40,7 @@ header h2 {
 
 header a {
     text-decoration: none;
-    color: rgb(110, 53, 174);
+    color: blueviolet;
     background: white;
     padding: 16px 32px;
     font-size: 14px;
@@ -55,6 +55,7 @@ main {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 .grid-2-columns {
@@ -72,13 +73,33 @@ main h2 {
 main p {
     font-family: var(--paragraph-font);
     font-size: 16px;
-    line-height: 1.5;
+    text-align: left;
 }
 
 section {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px;
+}
+
+section.secondary {
+    background-color: rgb(235, 224, 255);
+    text-align: center;
+}
+
+main h2 {
+    font-family: var(--main-font);
+    font-size: 25px;
+    color: blueviolet;
+}
+
+main h3 {
+    font-family: var(--main-font);
+    font-size: 32px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+    color: blueviolet;
 }
 
 .grid {
@@ -87,6 +108,48 @@ section {
 }
 
 .grid-3-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    background-color: white;
+    margin: 30px 0;
+}
+
+.card-body {
+    padding: 32px;
+}
+
+main h4 {
+    font-family: var(--main-font);
+    color: blueviolet;
+    line-height: 1;
+    margin: 0;
+}
+
+main h5 {
+    font-family: var(--main-font);
+    color: blueviolet;
+    line-height: 1;
+    margin: 0;
+}
+
+.btn {
+    display: block;
+    background-color: rgba(54, 27, 84);
+    color: white;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: var(--main-font);
+    padding: 16px;
+    text-decoration: none;
+}
+
+.btn a {
+    color: white;
+}
+
+.footer-grid {
     grid-template-columns: 1fr 2fr 2fr;
 }
 
