@@ -1,5 +1,7 @@
 :root {
-    --main-font: "Playwrite IE", cursive;
+    --main-font: "Courgette", cursive;
+    --paragraph-font: "Kalam", cursive;
+    --links-color: rgb(56, 228, 40);
 }
 
 body {
@@ -7,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -15,48 +17,96 @@ header {
     font-family: var(--main-font);
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('../images/polyam-triad.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
     color: white;
-    padding: 50px 0;
+    padding: 200px 0;
     text-align: center;
+    background-size: cover;
+
 }
 
-
 header h1 {
-    font-size: 60px;
+    font-size: 96px;
     letter-spacing: 5px;
-    margin-top: 140px;
-    margin-bottom: -20px;
+    margin: 30px 0;
+    line-height: 1;
 }
 
 header h2 {
     letter-spacing: 3px;
-    margin-bottom: 60px;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 40px;
 }
 
 header a {
     text-decoration: none;
     color: rgb(110, 53, 174);
     background: white;
-    padding: 5px 10px;
-    font-size: 13px;
+    padding: 16px 32px;
+    font-size: 14px;
+    line-height: 1.5;
+    display: inline-block;
+    margin-top: 32px;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
 }
 
 footer {
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('../images/women-polycule.png');
+    background-image: linear-gradient(rgba(54, 27, 84, 0.7)), url('../images/women-polycule.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 100px 0;
 }
 
-@media (max-width: 991px) {
+footer h3 {
+    font-family: var(--main-font);
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+footer p {
+    font-family: var(--paragraph-font);
+    font-size: 16px;
+    margin-right: 20px;
+    line-height: 24px;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer li {
+    list-style: none;
+    font-family: var(--paragraph-font);
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    color: var(--links-color);
+    text-decoration: none;
+}
+
+@media (max-width: 960px) {
     header {
-        padding: 10px 0;
+        padding: 60px 0;
     }
 
-    header a {
-        display: inline-block;
-        margin-bottom: 10px;
+    header h1 {
+        font-size: 48px;
+    }
+
+    header h2 {
+        font-size: 20px;
     }
 }
