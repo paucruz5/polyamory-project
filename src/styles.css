@@ -85,17 +85,23 @@ section {
 section.secondary {
     background-color: rgb(224, 255, 234);
     text-align: center;
+    padding: 20px 20px;
+}
+
+section.secondary h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 main h2 {
-    font-family: var(--main-font);
-    font-size: 25px;
+    font-family: var(--paragraph-font);
+    font-size: 30px;
     color: blueviolet;
 }
 
 main h3 {
     font-family: var(--main-font);
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.5;
     margin: 0;
     text-align: center;
@@ -111,17 +117,17 @@ main h3 {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.card {
-    background-color: white;
-    margin: 30px 0;
+section.secondary .grid-3-columns {
+    grid-gap: 10px;
 }
 
-.card-img.grid {
-    grid-gap: 0;
+.card {
+    background-color: white;
+    margin: 0;
 }
 
 .card-body {
-    padding: 32px;
+    padding: 5px;
 }
 
 .book-img {
@@ -132,7 +138,8 @@ main h4 {
     font-family: var(--main-font);
     color: blueviolet;
     line-height: 1;
-    margin: 0;
+    margin-top: 20px;
+    font-size: 25px;
 }
 
 main h5 {
