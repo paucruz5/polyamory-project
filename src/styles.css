@@ -2,6 +2,8 @@
     --main-font: "Courgette", cursive;
     --paragraph-font: "Kalam", cursive;
     --links-color: rgb(56, 228, 40);
+    --light-green: rgb(224, 255, 234);
+    --light-purple: rgb(235, 224, 255);
 }
 
 body {
@@ -29,26 +31,26 @@ header {
     text-align: center;
 }
 
+header h3 {
+    font-size: clamp(15px, 3vw, 25px);
+    letter-spacing: clamp(1px, 0.5vw, 3px);
+    margin: 0;
+    margin-top: clamp(10px, 25vw, 270px);
+}
+
 header h1 {
     font-size: clamp(40px, 10vw, 96px);
     letter-spacing: clamp(1px, 1vw, 15px);
-    margin-top: clamp(1px, 23vw, 250px);
-    margin-bottom: 15px;
-}
-
-header h2 {
-    letter-spacing: clamp(1px, 0.5vw, 5px);
-    font-size: clamp(20px, 4vw, 40px);
     margin: 0;
 }
 
 main {
-    background-color: rgb(235, 224, 255);
+    background-color: var(--light-purple);
 }
 
 main h2 {
     margin: 0;
-    font-size: 35px;
+    font-size: 40px;
     padding: 30px 0;
     text-align: center;
     font-family: var(--main-font);
@@ -79,32 +81,154 @@ main h2 {
     margin-top: 0;
 }
 
-section {
+.polyam-dinner {
+    width: 100%;
     max-width: 100%;
-    padding: 100px;
+    height: auto;
+    display: block;
 }
 
-section.secondary {
-    background-color: rgb(224, 255, 234);
+.books-section {
+    background-color: var(--light-green);
     text-align: center;
     padding: 20px 20px;
 }
 
-section.secondary h3 {
+.books-section h2 {
     margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.books-cards {
+    display: grid;
+    grid-gap: 64px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.card {
+    background-color: var(--light-purple);
+}
+
+.card-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.book-img {
+    max-width: 100%;
+}
+
+.card-body {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-body h4 {
+    font-family: var(--main-font);
+    color: blueviolet;
+    margin-top: 5px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 10px 5px;
+    text-align: left;
+}
+
+.card-body h5 {
+    font-family: var(--main-font);
+    color: blueviolet;
+    margin: 0;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.book-link {
+    display: block;
+    text-align: center;
+    color: rgb(235, 32, 222);
+    text-decoration: none;
+}
+
+.author-link {
+    display: block;
+    width: fit-content;
+    background-color: var(--light-purple);
+    color: rgb(235, 32, 222);
+    font-size: 20px;
+    font-family: var(--main-font);
+    padding: 0;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.two-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bottom-books-section {
+    margin-top: 30px;
+}
+
+.polyam-types {
+    text-align: center;
+    margin: 20px;
+}
+
+.polyam-types h2 {
+    padding-bottom: 0;
+    font-size: 60px;
+}
+
+.polyam-types h4 {
+    font-family: var(--paragraph-font);
+    color: blueviolet;
+    padding: 0 0 15px 0;
+    font-size: 20px;
+}
+
+.grid-poly-definitions {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img-polyam-types {
+    max-width: 100%;
+    display: block;
+    transition: transform 400ms ease-in-out, filter 400ms ease-in-out, opacity 400ms ease-in-out;
+}
+
+.grid-poly-definitions:hover .img-polyam-types:not(:hover) {
+    filter: blur(4px);
+    opacity: 0.65;
+}
+
+.img-polyam-types:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+    filter: none;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-grid {
+    grid-template-columns: 1fr 2fr 2fr;
 }
 
 .grid-2-columns {
     grid-template-columns: 1fr 1fr;
-}
-
-main h3 {
-    font-family: var(--main-font);
-    font-size: 40px;
-    line-height: 1.5;
-    margin: 0;
-    text-align: center;
-    color: blueviolet;
 }
 
 .grid {
@@ -114,62 +238,6 @@ main h3 {
 
 .grid-3-columns {
     grid-template-columns: 1fr 1fr 1fr;
-}
-
-section.secondary .grid-3-columns {
-    grid-gap: 10px;
-}
-
-.card {
-    background-color: white;
-    margin: 0;
-}
-
-.card-body {
-    padding: 5px;
-}
-
-.book-img {
-    max-width: 100%;
-}
-
-main h4 {
-    font-family: var(--main-font);
-    color: blueviolet;
-    line-height: 1;
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-main h5 {
-    font-family: var(--main-font);
-    color: blueviolet;
-    line-height: 1;
-    margin: 0;
-}
-
-.btn {
-    display: block;
-    background-color: rgba(54, 27, 84);
-    color: white;
-    font-size: 14px;
-    line-height: 21px;
-    font-family: var(--main-font);
-    padding: 16px;
-    text-decoration: none;
-}
-
-.btn a {
-    color: white;
-}
-
-.img-polyam-types {
-    max-width: 100%;
-    display: block;
-}
-
-.footer-grid {
-    grid-template-columns: 1fr 2fr 2fr;
 }
 
 footer {
