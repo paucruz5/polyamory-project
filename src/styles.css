@@ -92,6 +92,10 @@ main h2 {
     margin-top: 0;
 }
 
+.large-h2 {
+    font-size: 35px;
+}
+
 .polyam-dinner,
 .polyam-picnic {
     width: 100%;
@@ -141,7 +145,7 @@ main h2 {
 .card-body h4 {
     font-family: var(--main-font);
     color: blueviolet;
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 25px;
     margin-bottom: 10px;
 }
@@ -206,53 +210,44 @@ main h2 {
 }
 
 .polyam-types h2 {
-    padding-bottom: 0;
+    padding-bottom: 40px;
     font-size: 60px;
 }
 
-.polyam-types h4 {
-    font-family: var(--paragraph-font);
-    color: blueviolet;
-    padding: 0 0 15px 0;
-    font-size: 20px;
-}
-
-.grid-poly-definitions {
+.grid-polyam-definitions {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 40px;
 }
 
-.img-polyam-types {
-    max-width: 100%;
-    display: block;
-    border: 3px solid black;
-    transition: transform 400ms ease-in-out, filter 400ms ease-in-out;
+.polyam-definitions {
+    background-color: var(--light-green);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-/* When the grid is hovered, blur every image except the one directly under the pointer. */
-.grid-poly-definitions:hover .img-polyam-types:not(:hover) {
-    filter: blur(3px);
+.polyam-definitions h3 {
+    font-family: var(--main-font);
+    color: blueviolet;
+    margin-top: 8px;
+    font-size: 25px;
+    margin-bottom: 8px;
+
 }
 
-.img-polyam-types:hover {
-    transform: scale(1.5);
-    cursor: pointer;
-    z-index: 1;
+.polyam-definitions p {
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
 }
 
 .footer-grid {
-    grid-template-columns: 0.8fr 2fr 2fr;
+    grid-template-columns: 2fr 2fr;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 35px;
     color: white;
-}
-
-footer ul {
-    padding: 0;
-    list-style: none;
-    font-family: var(--paragraph-font);
 }
 
 footer h3 {
@@ -267,6 +262,7 @@ footer p {
     font-family: var(--paragraph-font);
     font-size: 16px;
     line-height: 26px;
+    text-align: justify;
 }
 
 .disclaimer {
@@ -308,6 +304,10 @@ footer a {
         margin: 0;
     }
 
+    .medium-h2 {
+        font-size: 25px;
+    }
+
     .polyam-flag {
         width: clamp(180px, 52vw, 260px);
     }
@@ -320,12 +320,23 @@ footer a {
         font-size: clamp(15px, 5vw, 20px);
     }
 
+    .large-h2 {
+        font-size: 25px;
+    }
+
     .books-section h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .books-cards {
         grid-template-columns: 1fr;
+    }
+
+    .grid-poly-definitions {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
     }
 
     .footer-grid {
@@ -334,10 +345,14 @@ footer a {
     }
 }
 
-/* Works on medium and small screens */
+/* Works only on medium screens */
 @media (min-width: 769px) and (max-width: 991px) {
     .flag-section p {
         font-size: clamp(13px, 1.8vw, 19.5px);
+    }
+
+    .large-h2 {
+        font-size: 30px;
     }
 
     .books-section p {
@@ -352,10 +367,19 @@ footer a {
         font-size: 13.5px;
     }
 
-    .grid {
-        grid-template-columns: 1fr;
-        grid-gap: 32px;
+    .grid-polyam-definitions {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 20px;
     }
 
+}
 
+/* works on medium and small screens */
+@media (max-width: 991px) {
+    .polyam-types h2 {
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
 }
